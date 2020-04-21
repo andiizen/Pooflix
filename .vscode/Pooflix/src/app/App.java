@@ -43,6 +43,19 @@ public class App {
         epiDemo = laMejorTemporada.getEpisodioAtPosicion(posicion);
 
         epiDemo.reproducir();
+        
+        //primero: preguntar si es un objeto de x tipo, usando el operador "instanceof"(instancia de).
+        //segundo: usando el operador de casteo. (es decir, "transformando" la referencia)
+        if (epiDemo instanceof Websodio){
+            Websodio webi = (Websodio)epiDemo;
+            webi.enviarAlertaDeQueEstaOnline();
+        }
+        else {
+            System.out.println("No hay que hacer mas nada con un episodio");
+        }
+
+
+
 
         int lala;
 

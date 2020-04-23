@@ -12,33 +12,32 @@ public class Temporada {
 
         for (Episodio epi : this.episodios) {
             if (epi.numero == nro) {
-            return epi;
+                return epi;
+
+            }
 
         }
-       
+        return null;
+    }
 
+    /**
+     * Obtiene un episodio en base a la posicion dentro del ArrayList. Recordar que
+     * los arrayList la primer posicion es la 0.
+     * 
+     * @param pos
+     * @return
+     */
+    public Episodio getEpisodioAtPosicion(int pos) {
+        return this.episodios.get(pos);
     }
-    return null;
-}
-/**
- * Obtiene un episodio en base a la posicion dentro del ArrayList. Recordar que
- * los arrayList la primer posicion es la 0.
- * 
- * @param pos
- * @return
- */
-public Episodio getEpisodioAtPosicion(int pos) {
-    return this.episodios.get(pos);
-}
-public List <Websodio> obtenerWebSodios() {
-    List <Websodio> lista = new ArrayList<>();
-    for (Episodio epi: this.episodios){
-        if (epi instanceof Websodio)
-        lista.add((Websodio) epi);
-    }
-            return lista;
+
+    public List<Websodio> obtenerWebSodios() {
+        List<Websodio> lista = new ArrayList<>();
+        for (Episodio epi : this.episodios) {
+            if (epi instanceof Websodio)
+                lista.add((Websodio) epi);
         }
+        return lista;
+    }
 
 }
-
-

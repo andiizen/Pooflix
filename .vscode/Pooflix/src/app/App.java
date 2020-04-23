@@ -3,8 +3,8 @@ package app;
 import java.util.Scanner;
 
 public class App {
-   
-    public static Scanner Teclado = new Scanner (System.in);
+
+    public static Scanner Teclado = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
 
@@ -24,15 +24,15 @@ public class App {
 
         elTop.reproducir();
 
-        //web sodio
+        // web sodio
         elTop = laMejorTemporada.getEpisodio(23);
-        
+
         elTop.reproducir();
-        
+
         System.out.println("Empezando otra cosa");
 
         Episodio epiDemo;
-        
+
         int posicion = 0;
 
         /// En base a un numero de posicion de episodio, obtenerlo de la lista
@@ -43,23 +43,21 @@ public class App {
         epiDemo = laMejorTemporada.getEpisodioAtPosicion(posicion);
 
         epiDemo.reproducir();
-        
-        //primero: preguntar si es un objeto de x tipo, usando el operador "instanceof"(instancia de).
-        //segundo: usando el operador de casteo. (es decir, "transformando" la referencia)
-        if (epiDemo instanceof Websodio){
-            Websodio webi = (Websodio)epiDemo;
+
+        // primero: preguntar si es un objeto de x tipo, usando el operador
+        // "instanceof"(instancia de).
+        // segundo: usando el operador de casteo. (es decir, "transformando" la
+        // referencia)
+        if (epiDemo instanceof Websodio) {
+            Websodio webi = (Websodio) epiDemo;
             webi.enviarAlertaDeQueEstaOnline();
-        }
-        else {
+        } else {
             System.out.println("No hay que hacer mas nada con un episodio");
         }
-
-
-
 
         int lala;
 
         lala = 0;
-    
+
     }
 }

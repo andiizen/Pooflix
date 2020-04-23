@@ -30,5 +30,15 @@ public class Temporada {
 public Episodio getEpisodioAtPosicion(int pos) {
     return this.episodios.get(pos);
 }
+public List <Websodio> obtenerWebSodios() {
+    List <Websodio> lista = new ArrayList<>();
+    for (Episodio epi: this.episodios){
+        if (epi instanceof Websodio)
+        lista.add((Websodio) epi);
+    }
+            return lista;
+        }
+
 }
+
 

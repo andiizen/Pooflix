@@ -4,14 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Temporada {
+    public Temporada(int numero, int anio) {
 
-    public int numero;
-    public List<Episodio> episodios = new ArrayList<>();
+        this.setNumero(numero);
+        this.setAnio(anio);
+    }
+
+    private int numero;
+    private int anio;
+    private List<Episodio> episodios = new ArrayList<>();
 
     public Episodio getEpisodio(int nro) {
 
         for (Episodio epi : this.episodios) {
-            if (epi.numero == nro) {
+            if (epi.getNumero() == nro) {
                 return epi;
 
             }
@@ -31,13 +37,42 @@ public class Temporada {
         return this.episodios.get(pos);
     }
 
-    public List<Websodio> obtenerWebSodios() {
-        List<Websodio> lista = new ArrayList<>();
-        for (Episodio epi : this.episodios) {
-            if (epi instanceof Websodio)
-                lista.add((Websodio) epi);
-        }
+   public List<Websodio> obtenerWebSodios() {
+      List<Websodio> lista = new ArrayList<>();
+       for (Episodio epi : this.episodios) {
+           if (epi instanceof Websodio)
+               lista.add((Websodio) epi);
+       }
+    
         return lista;
+       }
+
+    public int getCantidadEpisodios() {
+        return this.episodios.size();
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public List<Episodio> getEpisodios() {
+        return episodios;
+    }
+
+    public void setEpisodios(List<Episodio> episodios) {
+        this.episodios = episodios;
     }
 
 }

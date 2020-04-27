@@ -54,6 +54,12 @@ public class App {
         } else {
             System.out.println("No hay que hacer mas nada con un episodio");
         }
+       
+        miPooflix.inicializarListaNominados();
+
+        miPooflix.reproducirTrailerNominacion();
+        
+        
 
         int lala;
 

@@ -15,6 +15,10 @@ public abstract class Contenido {
     private String descripcion;
     private List<Actor> elenco = new ArrayList<>(); // lista de clase actor y nombre de la variable que le pongamos
 
+    public void reproducir () {
+        
+    }
+
     public String getNombre() {
         return nombre;
     }
